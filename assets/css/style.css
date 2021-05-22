@@ -1,0 +1,476 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Padauk', sans-serif;
+  background-color: #eaecf0c4;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*-------------------- ヘッター始まり */
+.section1 {
+  /* background-color: blueviolet; */
+  background-image: url("../img/minimalist.jpg");
+  /* background-position: ; */
+  background-size: cover;
+  background-position: no-repeat;
+  background-attachment: fixed ;
+
+  height: 90vh;
+}
+
+.header1 {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* border-bottom: 1px solid black; */
+  /* background-color: rgb(60, 255, 0); */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* 横線スライドだよ */
+.header1:before{
+	content: '';
+	position: absolute;
+	top: 100px;
+	left: 0;
+	border-bottom: double 4px #000;
+	animation: border_anim 2s linear 2s forwards;
+}
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+
+.header-left {
+  /* background-color: aquamarine; */
+
+  /* transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: linear; */
+  animation: fuwafuwa 1s infinite ease-in-out .8s alternate;
+}
+
+@keyframes fuwafuwa {
+  0%{
+    transform: translate(0, 0) rotate(-15);
+  }
+  50%{
+    transform: translate(0, -15) rotate(0deg);
+  }
+  100%{
+    transform: translate(0, 0) rotate(15deg);
+  }
+}
+
+.header-right {
+  width: 400px;
+  /* background-color: blue; */
+}
+
+.header-ul {
+  /* background-color: brown; */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.header-ul > .header-li > a{
+  font-size: 1.3em;
+  color: black;
+  cursor: pointer;
+}
+.header-ul > .header-li > a:active {
+  color: pink;
+}
+
+.fab:active {
+  color: pink;
+}
+
+.header-top {
+  width: 200px;
+  /* background-color: blueviolet; */
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-main {
+  /* height: 100vh; */
+  position: relative;
+}
+
+.header-main-h1 {
+  position: absolute;
+  top: 200px;
+  left: 270px;
+  font-size: 3em;
+
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1.36);
+  animation-fill-mode: forwards;
+}
+
+.header-main-p, .header-main-p2 {
+  position: absolute;
+  top: 270px;
+  left: 270px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2em;
+
+  animation-name: second;
+  /* animation-delay: 3s; */
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.header-main-p2 {
+  top: 300px;
+  left: 270px;
+  padding-top: 1.3%;
+
+  animation-name: second2;
+  /* animation-delay: 3s; */
+  animation-duration: 3.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 10;
+    transform: translateY(0);
+  }
+}
+@keyframes second {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 10;
+    transform: translateX(0);
+  }
+}
+@keyframes second2 {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 10;
+    transform: translateX(0);
+  }
+}
+
+/*-------------------- ヘッター終わり */
+
+/*-------------------- メイン始まり */
+.main {
+  background-color: white;
+  width: 1200px;
+  margin: 0 auto;
+
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.section2 {
+  /* width: 1200px;
+  margin: 0 auto; */
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section2-h1 {
+  font-size: 3em;
+  padding: 3% 0;
+}
+
+.section2-ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.section2-li {
+  padding: 2%;
+}
+.section2-p {
+  font-size: 2em;
+}
+
+/* --------------about--------section3 */
+.section3 {
+  /* width: 1200px;
+  margin: 0 auto; */
+  border-top: 1px solid black;
+  padding-bottom: 5%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section3-flex {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: flex-end; */
+}
+
+/* my photo */
+.section3-img, .section3-img2 {
+  border-radius: 10px;
+}
+.section3-div {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.section3-img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section3-img2:hover {
+  /* opacity: 0.3; */
+  animation-name: slide;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1.36);
+  animation-fill-mode: forwards;
+  /* animation-play-state: paused; */
+}
+@keyframes slide {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-300px);
+    display: none;
+  }
+}
+
+.section3-h2 {
+  font-size: 2em;
+}
+.section3-p {
+  font-size: 1.5em;
+}
+
+/*-------------------- テーブル */
+.table {
+  width: 500px;
+  /* background-color: rgb(51, 125, 128); */
+  border-collapse: collapse;
+}
+
+.tr1 {
+  border-bottom: 1px solid black;
+}
+
+.th1, .td1 {
+  height:50px;
+}
+.td1 {
+  padding-left: 40px;
+  text-align: left;
+}
+
+/* ----------------study-----------section4 */
+.section4 {
+  /* width: 1200px;
+  margin: 0 auto; */
+  border-top: 1px solid black;
+  padding-bottom: 5%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.section4-p {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
+.section4-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ------------------section5*/
+.section5 {
+  /* width: 1200px;
+  margin: 0 auto; */
+  border-top: 1px solid black;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form > .form-p > input {
+  width: 550px;
+  height: 40px;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+.form textarea  {
+  width: 550px;
+  height: 230px;
+  margin-bottom: 25px;
+}
+.submit {
+  width: 100px;
+  height: 50px;
+  font-size: 23px;
+  background-color: black;
+  color: white;
+  /* border-radius: 8%; */
+}
+/*-------------------- メイン終わり */
+
+/*-------------------- フッター始まり */
+.footer-icon {
+  padding-left: 40px;
+  cursor: pointer;
+}
+.fly:active {
+  color: pink;
+}
+
+.flex {
+  width: 1200px;
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-ul {
+  font-size: 1.2em;
+}
+.footer-li {
+  border-bottom: 1px solid rgb(138, 134, 134);
+  padding: 15px 0 0;
+}
+
+.icon {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-p {
+  text-align: center;
+  padding: 0 0 2%;
+}
+/*-------------------- フッター終わり */
+
+/*-------------------- レスポンシブ始まり */
+@media (max-width:780px) {
+  .header-top {
+    display: none;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* --------------Q07 */
+  .hamburger {
+    width: 28px;
+    height: 30px;
+    margin: 30px auto 10px;
+  }
+  
+  .hamburger span:after,
+  .hamburger span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+  }
+  
+  .hamburger span:after {
+    top: 9px;
+  }
+  
+  .hamburger span {
+    position: relative;
+    display: block;
+  }
+  
+  .hamburger span,
+  .hamburger span:after,
+  .hamburger span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    transition: all 0.5s; /*←アニメーション*/
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+  
+  .hamburger.on span {
+    background-color: transparent;
+  }
+  
+  .hamburger.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  /* Q7ここまで */
+
+  .header-ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*-------------------- レスポンシブ終わり */
