@@ -206,7 +206,7 @@ ul {
   color: orangered;
 } */
 
-/* クリックハート */
+/* -----------------------------クリックハート */
 .like-div {
   position: relative;
 }
@@ -251,6 +251,7 @@ ul {
   }
   50% {
     transform: scale(1.1);
+    color: pink;
   }
   100% {
     transform: scale(1);
@@ -279,6 +280,7 @@ ul {
   }
   50% {
     transform: scale(1.1);
+    color: pink;
   }
   100% {
     transform: scale(1);
