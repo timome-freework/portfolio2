@@ -122,7 +122,7 @@ ul {
   position: relative;
 }
 
-.header-main-a {
+.web-hajimaru {
   color: black;
 }
 .header-main-h1 {
@@ -206,6 +206,86 @@ ul {
   color: orangered;
 } */
 
+/* クリックハート */
+.like-div {
+  position: relative;
+}
+.like {
+  position: absolute;
+  top: 210px;
+  left: 427px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  transition: background 1s;
+}
+.like:hover {
+  background: #f5f5f5;
+}
+
+.like [type="checkbox"] {
+  display: none;
+}
+
+.heart {
+  font-size: 40px;
+  color: #e4e4e4;
+  user-select: none;
+  position: relative;
+  top: 1px;
+}
+
+.like [type="checkbox"]:checked ~ .heart {
+  animation-name: heart;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    color: pink;
+  }
+}
+
+.ripple {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: pink;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.like [type="checkbox"]:checked ~ .ripple {
+  animation-name: ripple;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/* クリックハート終わり */
 /*-------------------- ヘッター終わり */
 
 /*-------------------- メイン始まり */
@@ -239,6 +319,9 @@ ul {
 .section2-li {
   padding: 2%;
 }
+.list-img {
+  border: 1px solid black;
+} 
 .section2-p {
   font-size: 2em;
 }
