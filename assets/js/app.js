@@ -1,13 +1,15 @@
 $(function() {
   // -----------------------------------------Webから始まる------------------------------
     $('#like').on('click', function() {
-      // $('.header-main-p').show(100, function() {
-      //   console.log("hello");
-      // });
+      $('.header-main-p').fadeOut(500,function(){
+        $('.header-main-p').fadeIn(1000);
+      });
+      
       $('.header-main-p').text('programmingから広がる');
       $('.header-main-p').css('color', 'pink');
       $('.header-main-p2').text('未知なる世界へ');
       $('.header-main-p2').css('color', 'pink');
+
       // $('.header-main-p2').css('color', 'pink');
     });
     
