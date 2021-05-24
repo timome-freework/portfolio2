@@ -1,4 +1,12 @@
 $(function() {
+  // -----------------------------------------Webから始まる------------------------------
+    $('#q4-btn').on('click', function() {
+      $('.header-main-p').text('programmingから広がる');
+      $('.header-main-a').css('color', 'pink');
+    });
+    $('#q4-btn1').on('click', function() {
+      $('.header-main-p2').text('未知なる世界へ');
+    });
   // -------------------------------------------------section2------------------------------------
   $(window).on('scroll', function() {
 
@@ -8,11 +16,11 @@ $(function() {
     
   
     if (q11 < (header + scrollTop)) {
-      $('.header').css('backgroundcolor', 'red');
+      $('.header1').css('background-color', '#eaecf0c4');
     } 
-    // else {
-    //   $('#header').css('backgroundcolor', 'transparent');
-    // }
+    else {
+      $('#header').css('background-color', 'transparent');
+    }
   });
 
  
