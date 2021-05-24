@@ -240,12 +240,12 @@ ul {
 }
 
 .like [type="checkbox"]:checked ~ .heart {
-  animation-name: heart;
+  animation-name: hearts;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes heart {
+@keyframes hearts {
   0% {
     transform: scale(0);
   }
@@ -288,6 +288,35 @@ ul {
   }
 }
 /* クリックハート終わり */
+/* <!-- 飛行機 --> */
+  .like-div-fly {
+    position: absolute;
+    top: 260px;
+    left: 0;
+    color: transparent;
+
+    animation-name: kikyu;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes kikyu {
+    0% {
+      color: black;
+      transform: translate(0);
+    }
+    50% {
+      color: pink;
+      transform: translate(200px, -400px);
+    }
+    100% {
+      color: transparent;
+      transform: translate(400px, -460px);
+    }
+  }
+
+/* <!-- 飛行機終わり --> */
 /*-------------------- ヘッター終わり */
 
 /*-------------------- メイン始まり */
