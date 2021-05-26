@@ -1,14 +1,14 @@
 $(function() {
   // -----------------------------------------Webから始まる------------------------------
     $('#like').on('click', function() {
-      $('.header-main-p').fadeOut(500,function(){
-        $('.header-main-p').fadeIn(1000);
+      $('#hoge').fadeOut(500,function(){
+        $('.header-main-p').text('programmingから広がる');
+        $('.header-main-p').css('color', 'pink');
+        $('.header-main-p2').text('未知なる世界へ');
+        $('.header-main-p2').css('color', 'pink');
+        $('#hoge').show(500);
       });
       
-      $('.header-main-p').text('programmingから広がる');
-      $('.header-main-p').css('color', 'pink');
-      $('.header-main-p2').text('未知なる世界へ');
-      $('.header-main-p2').css('color', 'pink');
 
       // $('.header-main-p2').css('color', 'pink');
     });
