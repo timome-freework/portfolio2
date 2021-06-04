@@ -120,6 +120,12 @@ ul {
   display: flex;
   justify-content: space-around;
 }
+.header-top .fa-icon {
+  color: black;
+}
+.header-top .fa-icons {
+  color: rgb(190, 14, 167);
+}
 
 .header-main {
   /* height: 100vh; */
@@ -326,7 +332,7 @@ ul {
     }
     100% {
       color: transparent;
-      transform: translate(400px, -460px);
+      transform: translate(360px, -460px);
     }
   }
 
