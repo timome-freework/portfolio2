@@ -1,4 +1,17 @@
 $(function() {
+  // ハンバーガートグルはココから
+  $('#q7-btn').on('click', function() {
+    // console.log("こんにちは");
+    $(this).toggleClass('on');
+    $('.header-right').toggleClass('hide');
+  });
+  // ハンバーガートグルはココで終わり
+  // スライドはココから⇩⇩
+  // 12
+  $('#q7-btn').on('click', function() {
+    
+  });
+  // スライドはココまで⇑⇑
   // -----------------------------------------Webから始まる------------------------------
     $('#like').on('click', function() {
       $('#hoge').fadeOut(500,function(){
