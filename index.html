@@ -136,7 +136,7 @@
           </tr>
           <tr class="tr1">
             <th class="th1">住所</th>
-            <td class="td1">沖縄県北谷 <br>詳細はご依頼時にお伝え致します</td>
+            <td class="td1">津々浦々 <br>詳細はご依頼時にお伝え致します</td>
           </tr>
           <tr class="tr1">
             <th class="th1">Tel</th>
@@ -180,15 +180,34 @@
     </section>
     <section class="section5" id="section5">
       <h1 class="section2-h1">Contact</h1>
-      <form action="#" class="form">
-        <p class="form-p"><input type="text" value="" placeholder="name"></p> 
-        <p class="form-p"><input type="mail" value="" placeholder="mail"></p> 
-        <p class="form-p"><textarea name="msg" cols=100 rows=10></textarea></p>
-        <a href="" class="heart-button">ボタン
-          <input type="submit" value="Submit" class="submit">
-        </a>
+      <form action="#" class="form" id="form">
+        <!-- -----------------to-name---------------- -->
+        <div class="form-p">
+          <input type="text" name="to_name" id="to_name" placeholder="name">
+        </div>
+        <div class="form-p">
+          <input type="mail" name="message" id="message" placeholder="mail">
+        </div>
+        <div class="form-p">
+          <textarea name="contact" id="contact" cols=100 rows=10 placeholder="お問い合わせ内容はコチラに入力ください"></textarea>
+        </div>
+        <!-- <p class="form-p"></p> -->
+        <button class="heart-button" type="submit" value="Send Email" id="button1">ボタン
+        </button>
       </form>
     </section> 
+    <!------------------------ セクション６の画像--------------- -->
+  <section class="section6" id="section6">
+    <h1 class="section6-h1">
+      thank you for your inquiry
+    </h1>
+    <p class="section6-p">
+      この度はお問い合わせ頂きありがとうございます。
+      内容確認後、天満よりご連絡させて頂きますので、今しばらくお待ちくださいませ。<br><br><br>もし万が一、ご連絡がない場合はご入力頂いた情報に不備がある場合がございます。その際はお手数ですが、再度お問い合わせ頂くか、<a href="tel:08068482896" class="span-p">&lceil;080-6848-2896&rfloor;</a>までお電話頂けますと幸いです。
+    </p>
+    <button class="thanks-btn" type="submit" value="Returns" id="thanksbtn">戻る
+    </button>
+  </section>
   </main>
   <!-------------------------- メイン終わり ------------>
   <!-------------------------- フッター　始まり ------------>
@@ -210,10 +229,17 @@
     <p class="footer-p">&copy; tomomi temma 2021</p>
   </footer>
 
+  <!-- EmailJSのスクリプト -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('user_ozsI7OF7cRFQc4vA4JLPw')
+  </script>
+<!-- EmailJSのスクリプトはココで終わり -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/lightbox.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="./assets/js/app.js"></script>
 </body>
 </html>

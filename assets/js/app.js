@@ -74,6 +74,40 @@ $(function() {
     },
   });
 
+  // --------------------------------------section5 contact-------------------------
+  const btn5 = document.getElementById('button1');
+  const section6 = document.getElementById('section6');
+  const thanksbtn = document.getElementById('thanksbtn');
+
+  document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn5.textContent = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_sz6dvnp';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn5.textContent = 'Send Email';
+      section6.classList.add('sectionfix');
+
+      document.getElementById('to_name').value = '';
+      document.getElementById('message').value = '';
+      document.getElementById('contact').value = '';
+
+      thanksbtn.addEventListener('click', function(event) {
+      event.preventDefault();	
+      section6.classList.remove('sectionfix');
+    }, false);
+    }, (err) => {
+      btn5.textContent = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+  // --------------------------------------section5 contactはここで終わり-------------------------
+
   // トップへ戻る
   $('#q9-btn').on('click', function() {
     $('body, html').animate({scrollTop: 0}, 500);

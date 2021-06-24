@@ -348,7 +348,7 @@ ul {
 /*-------------------- メイン始まり */
 .main {
   background-color: white;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 
   border-left: 1px solid black;
@@ -584,11 +584,65 @@ ul {
     opacity: 0;
   }
 }
+/* .submit {
+  display: none;
+} */
+/*-------------------- メイン終わり */
+/* ----------------------------セクション６----------------- */
+.section6 {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(118, 118, 124);
+  color: antiquewhite;
 
-.submit {
   display: none;
 }
-/*-------------------- メイン終わり */
+
+.sectionfix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* opacity: 0.5; */
+
+  display: block;
+}
+
+.section6-h1 {
+  text-align: center;
+  font-size: 3em;
+  
+  padding: 5rem 0;
+}
+
+.section6-p {
+  width: 50%;
+  font-size: 1.4em;
+  padding-bottom: 3rem;
+  text-indent: 1em;
+  margin: 0 auto;
+}
+
+.span-p {
+  font-size: 1.6em;
+  color: antiquewhite;
+  border-bottom: 2px solid white;
+}
+
+.thanks-btn {
+  width: 20%;
+  height: 80px;
+  cursor: pointer;
+  color: black;
+  margin: 0 auto;
+  font-size: 2.1em;
+  /* position: relative; */
+  display: block;
+  background-color: #eaecf0c4;
+  /* padding: 0.8em 2.4em; */
+  /* margin: 2% 25%; */
+  border-radius: 5px;
+  border: 2px solid black;
+}
 
 /*-------------------- フッター始まり */
 /* トップへ戻る飛行機 */
@@ -614,7 +668,7 @@ ul {
 } */
 
 .flex {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   
   display: flex;
